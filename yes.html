@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles/yes.css">
+    <title>Hoorayy!!!</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">Hoorayy!!!</h1>
+        <div class="gif_container">
+            <img src="https://i.gifer.com/Pak.gif" alt="Cute animated illustration">
+        </div>
+        <p class="text">You're now My date today</p>
+
+        <div class="romantic-words">
+            <p>Let's play PUBG together love and make memories!<br>
+            I'll take you to the best virtual dates. ❤️<br>
+            Together forever, in every battle and beyond. 💕</p>
+        </div>
+
+        <!-- Music Player -->
+        <div class="music-player">
+            <div class="music-info">
+                <img src="img/lovelove.jpeg" alt="Song Cover" class="song-cover">
+                <div class="song-details">
+                    <h4 class="song-title">Love Song</h4>
+                    <p class="artist-name">By: Your suitor</p>
+                </div>
+            </div>
+            <audio id="audioPlayer" controls autoplay loop>
+                <source src="music/suitor.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    
+        <script>
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.volume = 0.5;
+        </script>
+</body>
+</html>

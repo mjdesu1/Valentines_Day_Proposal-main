@@ -1,0 +1,206 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(145deg, #fbc2eb, #a6c1ee);
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 2vw;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #ded4db, #e1b5b5);
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 2s ease;
+}
+
+.header_text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4vw;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.text {
+    font-size: 1.5vw;
+    color: #b40d0d;
+    margin-bottom: 20px;
+}
+
+.gif_container img {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    animation: float 3s infinite ease-in-out;
+}
+
+.romantic-words {
+    color: #000000;
+    margin-top: 20px;
+    font-size: 1.3vw;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 0 5%;
+}
+
+.music-player {
+    background: #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 90%;
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+}
+
+.music-player:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+.song-cover {
+    width: 15vw;
+    max-width: 80px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.song-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.song-title {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist-name {
+    margin: 0;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-button {
+    background: #1db954;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2em;
+    box-shadow: 0 4px 10px rgba(29, 185, 84, 0.4);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.control-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .music-player {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .controls {
+        margin-top: 10px;
+    }
+}
+
+/* Animation Effects */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Ultra Responsiveness */
+@media (max-width: 1200px) {
+    .header_text {
+        font-size: 5vw;
+    }
+    .text {
+        font-size: 1.8vw;
+    }
+    .romantic-words {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .header_text {
+        font-size: 6vw;
+    }
+    .text {
+        font-size: 2.5vw;
+    }
+    .gif_container img {
+        width: 70%;
+    }
+    .music-player {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header_text {
+        font-size: 7vw;
+    }
+    .text {
+        font-size: 3vw;
+    }
+    .gif_container img {
+        width: 60%;
+    }
+    .romantic-words {
+        font-size: 2.5vw;
+    }
+    .song-cover {
+        width: 25vw;
+    }
+}
